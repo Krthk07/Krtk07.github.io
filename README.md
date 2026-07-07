@@ -15,3 +15,11 @@ Animated multi-page portfolio for GitHub Pages.
 ## Upload
 
 Upload all files to the root of the `Krthk07.github.io` repository.
+
+## Optional Profile Photo
+
+To show a personal photo on the homepage, create an `assets` folder in the repository and upload your photo as:
+
+`assets/profile.jpg`
+
+If the photo is not uploaded, the homepage shows a clean KSN initials placeholder.

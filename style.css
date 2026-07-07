@@ -159,6 +159,23 @@ p {
   margin-top: 32px;
 }
 
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -6px 0 24px;
+}
+
+.hero-badges span {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -195,6 +212,69 @@ p {
   border-radius: 8px;
   padding: 18px;
   transform: perspective(900px) rotateY(-8deg);
+}
+
+.profile-card {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.profile-photo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(83, 214, 255, 0.95), rgba(255, 255, 255, 0.85));
+  color: #061018;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.profile-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: inherit;
+}
+
+.profile-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.profile-photo span {
+  position: relative;
+  z-index: 0;
+}
+
+.profile-label {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-card h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
 .terminal-card {
@@ -373,7 +453,7 @@ p {
 
 .project-visual {
   display: grid;
-  place-items: end start;
+  place-items: center;
   min-height: 220px;
   padding: 22px;
   margin-bottom: 22px;
@@ -385,6 +465,131 @@ p {
 .project-visual span {
   font-size: 4rem;
   font-weight: 800;
+}
+
+.project-detail {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: #d9e3f7;
+  font-size: 0.96rem;
+}
+
+.app-visual {
+  background:
+    radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.24), transparent 18%),
+    linear-gradient(135deg, rgba(83, 214, 255, 0.9), rgba(138, 124, 255, 0.5));
+}
+
+.phone-mockup {
+  width: 132px;
+  height: 190px;
+  padding: 18px;
+  border: 6px solid rgba(4, 16, 23, 0.86);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.28);
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.phone-mockup span {
+  display: block;
+  height: 22px;
+  margin: 12px 0;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #53d6ff, #8a7cff);
+}
+
+.phone-mockup span:nth-child(2) {
+  width: 70%;
+  background: #24d18f;
+}
+
+.phone-mockup span:nth-child(3) {
+  width: 88%;
+}
+
+.parking-visual {
+  background: linear-gradient(135deg, #8a7cff, #ff6fb1);
+}
+
+.parking-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  gap: 12px;
+  transform: rotateX(52deg) rotateZ(-18deg);
+}
+
+.parking-grid i {
+  height: 82px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  animation: parkingPulse 2.8s ease-in-out infinite;
+}
+
+.parking-grid i:nth-child(2),
+.parking-grid i:nth-child(5) {
+  background: rgba(36, 209, 143, 0.86);
+}
+
+.security-visual {
+  position: relative;
+  background: linear-gradient(135deg, #ffb86b, #ff6b6b);
+}
+
+.shield-mockup {
+  width: 150px;
+  height: 170px;
+  clip-path: polygon(50% 0, 92% 18%, 82% 78%, 50% 100%, 18% 78%, 8% 18%);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 44px rgba(0, 0, 0, 0.24);
+}
+
+.scan-beam {
+  position: absolute;
+  width: 120%;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.45);
+  filter: blur(4px);
+  animation: securityScan 2.4s linear infinite;
+}
+
+.support-visual {
+  background: linear-gradient(135deg, #24d18f, #53d6ff);
+}
+
+.ticket-stack {
+  position: relative;
+  width: 220px;
+  height: 142px;
+}
+
+.ticket-stack span {
+  position: absolute;
+  width: 180px;
+  height: 86px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.22);
+  animation: ticketShift 3.8s ease-in-out infinite;
+}
+
+.ticket-stack span:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.ticket-stack span:nth-child(2) {
+  left: 20px;
+  top: 28px;
+  animation-delay: 0.2s;
+}
+
+.ticket-stack span:nth-child(3) {
+  left: 40px;
+  top: 56px;
+  animation-delay: 0.4s;
 }
 
 .video-style {
@@ -510,6 +715,42 @@ p {
   }
 }
 
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(3deg);
+  }
+}
+
+@keyframes parkingPulse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes securityScan {
+  from {
+    transform: translateY(-120px) rotate(-12deg);
+  }
+  to {
+    transform: translateY(150px) rotate(-12deg);
+  }
+}
+
+@keyframes ticketShift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(14px);
+  }
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
@@ -551,6 +792,10 @@ p {
 
   .hero-panel {
     transform: none;
+  }
+
+  .profile-card {
+    grid-template-columns: 1fr;
   }
 
   .stats-strip,
