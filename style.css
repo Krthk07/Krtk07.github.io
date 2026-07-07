@@ -516,6 +516,51 @@ p {
   background: linear-gradient(135deg, rgba(83, 214, 255, 0.9), rgba(138, 124, 255, 0.5));
 }
 
+.image-visual {
+  position: relative;
+  min-height: 260px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.image-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.project-card:hover .image-visual img {
+  transform: scale(1.07);
+  filter: saturate(1.12) contrast(1.05);
+}
+
+.visual-glow,
+.visual-scan {
+  position: absolute;
+  pointer-events: none;
+}
+
+.visual-glow {
+  inset: auto -20% -35% 10%;
+  height: 130px;
+  background: linear-gradient(90deg, transparent, rgba(83, 214, 255, 0.42), transparent);
+  filter: blur(14px);
+  animation: scanLine 4.4s linear infinite;
+}
+
+.visual-scan {
+  inset: -20% auto -20% 18%;
+  width: 34px;
+  background: rgba(255, 255, 255, 0.28);
+  filter: blur(8px);
+  transform: rotate(16deg);
+  animation: projectScan 3.8s ease-in-out infinite;
+}
+
 .project-visual span {
   font-size: 4rem;
   font-weight: 800;
@@ -1020,6 +1065,15 @@ p {
   50% {
     opacity: 1;
     transform: translateX(16px);
+  }
+}
+
+@keyframes projectScan {
+  from {
+    left: -15%;
+  }
+  to {
+    left: 115%;
   }
 }
 
