@@ -1,2 +1,17 @@
-# Krtk07.github.io
-Personal portfolio website showcasing my IT projects, technical skills, and resume.
+# Karthik Sreeni Nair Portfolio
+
+Animated multi-page portfolio for GitHub Pages.
+
+## Files
+
+- `index.html` - Home page
+- `about.html` - About and education
+- `projects.html` - Project highlights
+- `experience.html` - Work experience
+- `contact.html` - Contact links
+- `style.css` - Styling and animations
+- `script.js` - Page transitions, mobile menu, and animated background
+
+## Upload
+
+Upload all files to the root of the `Krthk07.github.io` repository.
