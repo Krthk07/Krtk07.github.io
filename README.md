@@ -20,6 +20,6 @@ Upload all files to the root of the `Krthk07.github.io` repository.
 
 To show a personal photo on the homepage, create an `assets` folder in the repository and upload your photo as:
 
-`assets/profile.jpg`
+`profile.jpg`
 
-If the photo is not uploaded, the homepage shows a clean KSN initials placeholder.
+Upload it to the same root area as `index.html`. If the photo is not uploaded, the homepage shows a clean KSN initials placeholder.
